@@ -15,7 +15,7 @@ const MovieForm = () => {
     image:null
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>  {
    
     if (e.target.type === 'file') {
       setFormData({ ...formData, [e.target.name]: e.target.files[0] });
