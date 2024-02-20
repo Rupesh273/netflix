@@ -12,7 +12,8 @@ import {AiOutlinePlus} from 'react-icons/ai'
 const url ="https://api.themoviedb.org/3";
 //const url ="http://localhost:9000/";
 const apiKey ="a69351892c87c6d13a8a4af09721d00b";
-const image ="http://localhost:9000/api/image";
+//const image ="http://localhost:9000/api/image";
+const image ="https://image.tmdb.org/t/p/original";
 const Card =({img})=>(
     <img className='card' src={img} alt="fit" />
 )
@@ -44,11 +45,11 @@ function Home() {
 
   useEffect(()=>{
    const fetchPopular =async()=>{
-    // const {data:{results}}= await axios.get(`${url}/movie/popular?api_key=${apiKey}`);
-    const {data}= await axios.get("http://localhost:9000/movies");
-    console.log(data)
+     const {data:{results}}= await axios.get(`${url}/movie/popular?api_key=${apiKey}`);
+   // const {data}= await axios.get("http://localhost:9000/movies");
+  //  console.log(data)
     
-    setpopularMovies(data);
+    setpopularMovies(results);
     
     
    };
@@ -73,7 +74,7 @@ function Home() {
   return (
     <section className="Home">
         <div className="banner" style={{
-          backgroundImage: popularMovies[0]? `url(${`${image}/${popularMovies[0].backgroud_path}`})`: "rgb(16,16,16)"
+          backgroundImage: popularMovies[0]? `url(${`${image}/${popularMovies[0].backdrop_path}`})`: "rgb(16,16,16)"
         }}>
           {
             popularMovies[0] &&
