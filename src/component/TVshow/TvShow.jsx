@@ -89,6 +89,7 @@ const MovieForm = () => {
       <br />
 
       <button type="submit">Submit</button>
+      <button>Hello</button>
     </form>
   );
 };
