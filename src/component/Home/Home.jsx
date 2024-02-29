@@ -95,7 +95,7 @@ function Home() {
         <Row Titale={"Top Rated "} arr={top_ratedMovies}/>
         <Row Titale={"Upcoming"}arr ={upcomingMovies}/>
         <Row Titale={"Now laying"} arr ={now_playingMovies}/>
-        <Row Titale={"My List"}/>
+        <Row Titale={"My List"} arr={top_ratedMovies}/>
         <div>
         
         </div>
